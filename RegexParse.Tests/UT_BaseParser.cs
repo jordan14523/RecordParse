@@ -11,22 +11,22 @@ using RecordParse.Shared.Parsers;
 namespace RegexParse.Tests
 {
     [TestFixture]
-    public class UT_PipeParser
+    public class UT_BaseParser
     {
         [Test]
-        public void Parse_Valid_SplitsInputOnPipe()
+        public void Parse_CallsSingleParse()
         {
             //arrange
-            var input = "test | test";
+            var input = new List<string>() {"test", "test"};
             var serializer = Substitute.For<ISerializer<object>>();
-            var pipeParser = new PipeParser<object>(serializer);
+            var parser = Substitute.ForPartsOf<BaseParser<object>>(serializer);
+            parser.When(x => x.Parse(Arg.Any<string>())).DoNotCallBase();
 
             //act
-            var result = pipeParser.Parse(input);
+            parser.Parse(input);
 
             //assert
-            serializer.Received().Serialize(Arg.Is<List<string>>(x => !x.Any(y => y.Contains(" | "))));
-            serializer.Received().Serialize(Arg.Is<List<string>>(x => x.Count == 2));
+            parser.Received(2).Parse(Arg.Any<string>());
         }
     }
 }

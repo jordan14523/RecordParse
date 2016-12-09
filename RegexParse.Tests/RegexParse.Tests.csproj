@@ -48,6 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UT_BaseParser.cs" />
+    <Compile Include="UT_CommaParser.cs" />
     <Compile Include="UT_PersonSerializer.cs" />
     <Compile Include="UT_PipeParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

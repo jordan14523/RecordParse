@@ -43,6 +43,8 @@
     <Compile Include="Interfaces\ISerializer.cs" />
     <Compile Include="Interfaces\IParser.cs" />
     <Compile Include="Models\Person.cs" />
+    <Compile Include="Parsers\BaseParser.cs" />
+    <Compile Include="Parsers\CommaParser.cs" />
     <Compile Include="Parsers\PipeParser.cs" />
     <Compile Include="PersonSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
