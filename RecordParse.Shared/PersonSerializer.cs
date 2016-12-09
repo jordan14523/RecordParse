@@ -17,7 +17,7 @@ namespace RecordParse.Shared
             {
                 throw new SerializerException("Items in line do not have enough members")
                 {
-                    Data = {{SerializerExceptionData.LineValues, items}}
+                    Data = {{SerializerExceptionDataKeys.LineValues, items}}
                 };
             }
 
@@ -25,7 +25,7 @@ namespace RecordParse.Shared
             {
                 LastName = items[0],
                 FirstName = items[1],
-                Gender = items[2],
+                Gender = ParseGender(items[2]),
                 FavoriteColor = items[3],
                 DateOfBirth = ParseDate(items[4])
             };
@@ -41,9 +41,27 @@ namespace RecordParse.Shared
             {
                 throw new SerializerException("Could not parse date of birth.")
                 {
-                    Data = { { SerializerExceptionData.DateOfBirth, date } }
+                    Data = { { SerializerExceptionDataKeys.DateOfBirth, date } }
                 };
             }
+        }
+
+        public virtual GenderEnum ParseGender(string gender)
+        {
+            if (string.Compare(gender, "male", StringComparison.CurrentCultureIgnoreCase) == 0)
+            {
+                return GenderEnum.Male;
+            }
+
+            if (string.Compare(gender, "female", StringComparison.CurrentCultureIgnoreCase) == 0)
+            {
+                return GenderEnum.Female;
+            }
+
+            throw new SerializerException("Could not parse gender.")
+            {
+                Data = { { SerializerExceptionDataKeys.Gender, gender } }
+            };
         }
     }
 }

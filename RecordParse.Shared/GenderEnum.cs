@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace RecordParse.Shared
 {
-    public static class SerializerExceptionData
+    public enum GenderEnum
     {
-        public const string LineValues = "Line Values";
-        public const string DateOfBirth = "DOB";
+        Female = 1,
+        Male = 2
     }
 }
