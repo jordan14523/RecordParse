@@ -53,6 +53,7 @@
     <Compile Include="UT_PersonSerializer.cs" />
     <Compile Include="UT_PipeParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UT_SpaceParser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

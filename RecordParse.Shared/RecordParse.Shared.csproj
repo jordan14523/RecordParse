@@ -46,6 +46,7 @@
     <Compile Include="Parsers\BaseParser.cs" />
     <Compile Include="Parsers\CommaParser.cs" />
     <Compile Include="Parsers\PipeParser.cs" />
+    <Compile Include="Parsers\SpaceParser.cs" />
     <Compile Include="PersonSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SerializerException.cs" />
