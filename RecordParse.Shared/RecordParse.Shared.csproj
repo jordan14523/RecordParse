@@ -41,12 +41,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GenderEnum.cs" />
+    <Compile Include="Interfaces\IParserFactory.cs" />
     <Compile Include="Interfaces\ISerializer.cs" />
     <Compile Include="Interfaces\IParser.cs" />
     <Compile Include="Interfaces\IPersonSorter.cs" />
     <Compile Include="Models\Person.cs" />
+    <Compile Include="Parsers\ParserEnum.cs" />
     <Compile Include="Parsers\BaseParser.cs" />
     <Compile Include="Parsers\CommaParser.cs" />
+    <Compile Include="Parsers\ParserFactory.cs" />
     <Compile Include="Parsers\PipeParser.cs" />
     <Compile Include="Parsers\SpaceParser.cs" />
     <Compile Include="PersonSerializer.cs" />

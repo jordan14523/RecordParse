@@ -55,11 +55,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UT_PersonSorter.cs" />
     <Compile Include="UT_SpaceParser.cs" />
+    <Compile Include="UT_UIManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RecordParse.CLI\RecordParse.CLI.csproj">
+      <Project>{3a8feccb-2700-40c0-9278-03e95e652f9b}</Project>
+      <Name>RecordParse.CLI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RecordParse.Shared\RecordParse.Shared.csproj">
       <Project>{c1964c1c-0cae-4d81-9383-5bec2ff95573}</Project>
       <Name>RecordParse.Shared</Name>
