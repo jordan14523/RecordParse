@@ -30,14 +30,14 @@ namespace RecordParse.CLI
             }
         }
 
-        public bool IsHelpCommand(string[] args)
+        public virtual bool IsHelpCommand(string[] args)
         {
             return args.Length == 1 
                         && (string.Compare(args[0], "-h", StringComparison.CurrentCultureIgnoreCase) == 0
                             || string.Compare(args[0], "--help", StringComparison.CurrentCultureIgnoreCase) == 0);
         }
 
-        private bool CheckArgPaths(string[] args, List<string> validResults)
+        public virtual bool CheckArgCount(string[] args, List<string> validResults)
         {
             if (args.Length == 3)
             {
@@ -47,7 +47,7 @@ namespace RecordParse.CLI
             return false;
         }
 
-        private bool CheckArgCount(string[] args, List<string> validResults)
+        public virtual bool CheckArgPaths(string[] args, List<string> validResults)
         {
             foreach (var arg in args)
             {

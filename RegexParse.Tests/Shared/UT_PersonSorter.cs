@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NUnit.Framework;
 using RecordParse.Shared;
 using RecordParse.Shared.Model;
 
-namespace RegexParse.Tests
+namespace RegexParse.Tests.Shared
 {
     [TestFixture]
     public class UT_PersonSorter

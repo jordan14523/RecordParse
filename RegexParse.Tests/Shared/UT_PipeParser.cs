@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NSubstitute;
 using NUnit.Framework;
 using RecordParse.Shared.Interfaces;
 using RecordParse.Shared.Parsers;
 
-namespace RegexParse.Tests
+namespace RegexParse.Tests.Shared
 {
     [TestFixture]
     public class UT_PipeParser

@@ -48,14 +48,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UT_BaseParser.cs" />
-    <Compile Include="UT_CommaParser.cs" />
-    <Compile Include="UT_PersonSerializer.cs" />
-    <Compile Include="UT_PipeParser.cs" />
+    <Compile Include="CLI\UT_ArgumentValidation.cs" />
+    <Compile Include="Shared\UT_BaseParser.cs" />
+    <Compile Include="Shared\UT_CommaParser.cs" />
+    <Compile Include="Shared\UT_PersonSerializer.cs" />
+    <Compile Include="Shared\UT_PipeParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UT_PersonSorter.cs" />
-    <Compile Include="UT_SpaceParser.cs" />
-    <Compile Include="UT_UIManager.cs" />
+    <Compile Include="Shared\UT_PersonSorter.cs" />
+    <Compile Include="Shared\UT_SpaceParser.cs" />
+    <Compile Include="CLI\UT_UIManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

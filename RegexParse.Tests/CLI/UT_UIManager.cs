@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NSubstitute;
-using NSubstitute.ExceptionExtensions;
 using NUnit.Framework;
 using RecordParse.CLI;
 using RecordParse.CLI.Interfaces;
@@ -13,7 +9,7 @@ using RecordParse.Shared.Interfaces;
 using RecordParse.Shared.Model;
 using RecordParse.Shared.Parsers;
 
-namespace RegexParse.Tests
+namespace RegexParse.Tests.CLI
 {
     [TestFixture]
     public class UT_UIManager
