@@ -17,7 +17,7 @@ namespace RecordParse.API.App_Start
 
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
             builder.RegisterModule<SharedModule>();
-            builder.RegisterType<PersonService>().As<IPersonService>();
+            builder.RegisterType<PersonService>().As<IPersonService>().SingleInstance();
 
             return builder.Build();
         }

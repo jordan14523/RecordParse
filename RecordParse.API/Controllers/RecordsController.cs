@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.Http;
 using RecordParse.Shared;
@@ -17,6 +18,20 @@ namespace RecordParse.API.Controllers
         public RecordsController(IPersonService personService)
         {
             _personService = personService;
+        }
+
+        [Route("")]
+        [HttpPost]
+        public IHttpActionResult Post([FromBody]string input)
+        {
+            try
+            {
+                return Ok(_personService.Save(input));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet]

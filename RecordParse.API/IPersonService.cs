@@ -10,8 +10,7 @@ namespace RecordParse.API
         List<PersonDto> GetByName();
         List<PersonDto> GetByBirthdate();
         PersonDto MapToDto(Person person);
-        Person MapFromDto(PersonDto personDto);
-        void Validate(PersonDto person);
         List<PersonDto> MapToDto(List<Person> people);
+        PersonDto Save(string input);
     }
 }
