@@ -26,5 +26,10 @@ namespace RecordParse.Shared.Model
                     throw new Exception("Unexpected Gender Value.");
             }
         }
+
+        public string FormattedDobString()
+        {
+            return DateOfBirth.ToString("M/d/yyyy");
+        }
     }
 }

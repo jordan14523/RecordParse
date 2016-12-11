@@ -81,7 +81,7 @@ namespace RecordParse.CLI
             builder.Append(TrimLength(person.FirstName).PadRight(16));
             builder.Append(person.GetGenderString().PadRight(16));
             builder.Append(TrimLength(person.FavoriteColor).PadRight(16));
-            builder.Append(person.DateOfBirth.ToString("M/d/yyyy"));
+            builder.Append(person.FormattedDobString());
             builder.Append(Environment.NewLine);
             return builder.ToString();
         }
