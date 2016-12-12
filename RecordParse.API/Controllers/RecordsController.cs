@@ -38,7 +38,7 @@ namespace RecordParse.API.Controllers
         [Route("gender")]
         public IHttpActionResult GetByGenderAndLastName()
         {
-            return Ok(_personService.GetByDateGender());
+            return Ok(_personService.GetByGender());
         }
 
         [HttpGet]

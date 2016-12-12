@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Reflection;
 using System.Web;
@@ -9,6 +10,7 @@ using RecordParse.Shared.DI;
 
 namespace RecordParse.API.App_Start
 {
+    [ExcludeFromCodeCoverage]
     public static class DIConfig
     {
         public static IContainer GetContainer()

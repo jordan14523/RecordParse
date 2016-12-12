@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ using RecordParse.Shared.Parsers;
 
 namespace RecordParse.Shared.DI
 {
+    [ExcludeFromCodeCoverage]
     public class SharedModule : Module
     {
         protected override void Load(ContainerBuilder builder)

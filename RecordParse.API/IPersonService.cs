@@ -6,7 +6,7 @@ namespace RecordParse.API
 {
     public interface IPersonService
     {
-        List<PersonDto> GetByDateGender();
+        List<PersonDto> GetByGender();
         List<PersonDto> GetByName();
         List<PersonDto> GetByBirthdate();
         PersonDto MapToDto(Person person);

@@ -22,6 +22,11 @@ namespace RecordParse.API
             _parserFactory = parserFactory;
         }
 
+        public IReadOnlyList<Person> GetData()
+        {
+            return _data;
+        }
+
         public PersonDto Save(string input)
         {
             var type = DetectDelimeter(input);
@@ -31,7 +36,7 @@ namespace RecordParse.API
             return MapToDto(person);
         }
 
-        public List<PersonDto> GetByDateGender()
+        public List<PersonDto> GetByGender()
         {
             return MapToDto(_sorter.SortByGenderThenLastName(_data));
         }
@@ -46,7 +51,7 @@ namespace RecordParse.API
             return MapToDto(_sorter.SortByBirthdateAscending(_data));
         }
 
-        public PersonDto MapToDto(Person person)
+        public virtual PersonDto MapToDto(Person person)
         {
             return new PersonDto
             {
@@ -58,12 +63,12 @@ namespace RecordParse.API
             };
         }
 
-        public List<PersonDto> MapToDto(List<Person> people)
+        public virtual List<PersonDto> MapToDto(List<Person> people)
         {
             return people.Select(x => MapToDto(x)).ToList();
         }
 
-        public ParserEnum DetectDelimeter(string input)
+        public virtual ParserEnum DetectDelimeter(string input)
         {
             if (input.Contains("|"))
             {

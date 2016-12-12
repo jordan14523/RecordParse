@@ -12,13 +12,5 @@ namespace RecordParse.Shared
         public SerializerException(string message) : base(message)
         {
         }
-
-        public SerializerException(string message, Exception innerException) : base(message, innerException)
-        {
-        }
-
-        protected SerializerException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-        }
     }
 }
